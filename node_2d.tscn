@@ -1,0 +1,137 @@
+[gd_scene load_steps=17 format=3 uid="uid://c3eqnq6son5o"]
+
+[ext_resource type="TileSet" uid="uid://bn1iqalomnuo7" path="res://assets/tileset.tres" id="1_8tue4"]
+[ext_resource type="Script" path="res://TileMap.cs" id="2_8uyut"]
+[ext_resource type="Texture2D" uid="uid://yrc0d7ba7a34" path="res://assets/kenney_sokoban-pack/Tilesheet/sokoban_tilesheet@2.png" id="2_wmf8e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffunj"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(0, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47py8"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(128, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvicp"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(256, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbmc3"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(384, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0b42"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(512, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12y61"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(640, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sor4v"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(0, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov573"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(128, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jmgl"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(256, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blmwr"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(384, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15aee"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(512, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av5yl"]
+atlas = ExtResource("2_wmf8e")
+region = Rect2(640, 512, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wigk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffunj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47py8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvicp")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbmc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0b42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12y61")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sor4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov573")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jmgl")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blmwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15aee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av5yl")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap1" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource("1_8tue4")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 393217, 6, 1, 393217, 6, 65536, 393217, 6, 2, 393217, 6, 3, 393217, 6, 4, 393217, 6, 5, 393217, 6, 6, 393217, 6, 7, 393217, 6, 8, 393217, 6, 65544, 393217, 6, 131080, 393217, 6, 196616, 393217, 6, 262152, 393217, 6, 327688, 393217, 6, 393224, 393217, 6, 393223, 393217, 6, 393222, 393217, 6, 393221, 393217, 6, 393220, 393217, 6, 393219, 393217, 6, 393218, 393217, 6, 393217, 393217, 6, 393216, 393217, 6, 327680, 393217, 6, 131072, 393217, 6, 196608, 393217, 6, 262144, 393217, 6, 196609, 1, 4, 131074, 65537, 0)
+script = ExtResource("2_8uyut")
+
+[node name="Boxworld1" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource("1_8tue4")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 393217, 7, 3, 393217, 7, 131076, 393217, 7, 131077, 393217, 7, 262150, 393217, 7, 131078, 393217, 7, 196614, 65537, 3, 458755, 393217, 7, 327681, 393217, 7, 327680, 393217, 7, 196608, 393217, 7, 458756, 393217, 7, 393219, 393217, 7, 327683, 393217, 7, 196610, 393217, 7, 65538, 393217, 7, 262144, 393217, 7, 196609, 393217, 7, 327682, 393217, 7, 4, 393217, 7, 65540, 393217, 7, 131079, 393217, 7, 196615, 393217, 7, 262151, 393217, 7, 327685, 393217, 7, 393221, 393217, 7, 458757, 393217, 7, 131074, 393217, 7, 262148, 1, 4, 65539, 65537, 3, 262145, 65537, 3, 393220, 65537, 3, 262149, 393217, 7, 196613, 393217, 0, 196611, 393217, 0, 262147, 393217, 0, 327684, 393217, 0)
+
+[node name="EasyDebug" type="TileMap" parent="."]
+tile_set = ExtResource("1_8tue4")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 393217, 6, 65536, 393217, 6, 131072, 393217, 6, 131073, 393217, 6, 131074, 393217, 6, 131075, 393217, 6, 131076, 393217, 6, 3, 393217, 6, 2, 393217, 6, 1, 393217, 6, 4, 393217, 6, 65540, 393217, 6, 65537, 65537, 6, 65538, 65537, 0, 65539, 65537, 3)
+
+[node name="MaBoy" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_7wigk")
+animation = &"down"
